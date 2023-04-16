@@ -1,22 +1,23 @@
 import unittest
-from palindrome import isPalindrome, isPalindromeRecursive
+from palindromeRecursive import isPalindromeRecursive
+from palindromeIterative import isPalindromeIterative
 from palindromePhrase import isPalindromePhrase
 
 class TestPalindrome(unittest.TestCase):
     def testVoid(self):
-        result = isPalindrome("")
+        result = isPalindromeIterative("")
         self.assertEqual(result, True)
      
     def testSimple(self):
-        result = isPalindrome("ala")
+        result = isPalindromeIterative("ala")
         self.assertEqual(result, True)
     
     def testComplex(self):
-        result = isPalindrome("Neuquen")
+        result = isPalindromeIterative("Neuquen")
         self.assertEqual(result, True)
     
     def testSuperComplex(self):
-        result = isPalindrome("SomEtEMOS")
+        result = isPalindromeIterative("SomEtEMOS")
         self.assertEqual(result, True)
     
     def testVoidRecursive(self):
